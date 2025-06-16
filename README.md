@@ -33,8 +33,8 @@ A Spring Boot application for managing car buying requests and supplier offers w
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd car-buying-app
+   git clone https://github.com/HabibaHegazy/Car-Buying-Demo-App
+   cd Car-Buying-Demo-App
    ```
 
 2. **Build the application**
@@ -58,24 +58,24 @@ A Spring Boot application for managing car buying requests and supplier offers w
 
 ### Customer Requests
 
-- **POST** `/api/customer-requests` - Create a new request
-- **GET** `/api/customer-requests` - List all requests (with optional status filter)
-- **GET** `/api/customer-requests/{id}` - Get request by ID
-- **PUT** `/api/customer-requests/{id}/status` - Update request status
+- **POST** `/api/v1/customer-requests` - Create a new request
+- **GET** `/api/v1/customer-requests` - List all requests (with optional status filter)
+- **GET** `/api/v1/customer-requests/{id}` - Get request by ID
+- **PUT** `/api/v1/customer-requests/{id}/status` - Update request status
 
 ### Supplier Offers
 
-- **POST** `/api/supplier-offers` - Submit a new offer
-- **GET** `/api/supplier-offers/by-request/{requestId}` - Get offers for a request
-- **GET** `/api/supplier-offers/by-supplier/{supplierId}` - Get offers by supplier
-- **GET** `/api/supplier-offers/{id}` - Get offer by ID
+- **POST** `/api/v1/supplier-offers` - Submit a new offer
+- **GET** `/api/v1/supplier-offers/by-request/{requestId}` - Get offers for a request
+- **GET** `/api/v1/supplier-offers/by-supplier/{supplierId}` - Get offers by supplier
+- **GET** `/api/v1/supplier-offers/{id}` - Get offer by ID
 
 ## Sample API Usage
 
 ### Create a Customer Request
 
 ```bash
-curl -X POST http://localhost:8080/api/customer-requests \
+curl -X POST http://localhost:8080/api/v1/customer-requests \
   -H "Content-Type: application/json" \
   -d '{
     "customerId": 1,
@@ -87,7 +87,7 @@ curl -X POST http://localhost:8080/api/customer-requests \
 ### Submit a Supplier Offer
 
 ```bash
-curl -X POST http://localhost:8080/api/supplier-offers \
+curl -X POST http://localhost:8080/api/v1/supplier-offers \
   -H "Content-Type: application/json" \
   -d '{
     "supplierId": 1,
@@ -120,7 +120,7 @@ Application configuration is in `src/main/resources/application.yml`. Key config
 
 - **Database**: H2 in-memory database
 - **JPA**: Hibernate with SQL logging enabled
-- **Flyway**: Automatic migration on startup
+- **Liquibase**: Automatic migration on startup
 - **Server Port**: 8080
 
 ## Architecture
