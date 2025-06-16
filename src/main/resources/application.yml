@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: car-buying-app
+
+  datasource:
+    url: jdbc:h2:mem:carbuying
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.H2Dialect
+
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.xml
+    enabled: true
+    drop-first: false
+    contexts: default
+
+server:
+  port: 8080
+
+logging:
+  level:
+    com.carbuying: DEBUG
+    org.springframework.web: DEBUG
