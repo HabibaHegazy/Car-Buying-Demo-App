@@ -13,11 +13,11 @@ A Spring Boot application for managing car buying requests and supplier offers w
 
 ## Tech Stack
 
-- **Java 17**
-- **Spring Boot 3.2.0**
+- **Java 21**
+- **Spring Boot 3.5.0**
 - **Spring Data JPA**
 - **H2 Database** (for development)
-- **Flyway** (database migrations)
+- **Liquibase** (database migrations)
 - **MapStruct** (DTO mapping)
 - **JUnit 5** (testing)
 - **Maven** (build tool)
@@ -26,7 +26,7 @@ A Spring Boot application for managing car buying requests and supplier offers w
 
 ### Prerequisites
 
-- Java 17 or higher
+- Java 21 or higher
 - Maven 3.6+
 
 ### Setup & Installation
@@ -48,11 +48,11 @@ A Spring Boot application for managing car buying requests and supplier offers w
    ```
 
 4. **Access the application**
-    - API Base URL: `http://localhost:8080/api`
-    - H2 Console: `http://localhost:8080/h2-console`
-        - JDBC URL: `jdbc:h2:mem:carbuying`
-        - Username: `sa`
-        - Password: `password`
+   - API Base URL: `http://localhost:8080/api`
+   - H2 Console: `http://localhost:8080/h2-console`
+      - JDBC URL: `jdbc:h2:mem:carbuying`
+      - Username: `sa`
+      - Password: `password`
 
 ## API Endpoints
 
