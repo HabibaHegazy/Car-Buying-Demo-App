@@ -9,7 +9,7 @@ A Spring Boot application for managing car buying requests and supplier offers w
 - **Inspection Integration**: Pluggable adapter pattern for different inspection companies
 - **Validation**: Comprehensive input validation and error handling
 - **Pagination**: Support for paginated results on listing endpoints
-- **Database Migration**: Flyway integration for schema management
+- **Database Migration**: Liquibase integration for schema management
 
 ## Tech Stack
 
@@ -104,7 +104,7 @@ The application uses two main tables:
 - **customer_requests**: Stores car buying requests
 - **supplier_offers**: Stores supplier offers with foreign key to requests
 
-Database migrations are managed by Flyway and located in `src/main/resources/db/migration/`.
+Database migrations are managed by Liquibase and located in `src/main/resources/db/migration/`.
 
 ## Testing
 
